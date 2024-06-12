@@ -1,0 +1,68 @@
+package ops;
+
+public class Encapsulation {
+	private String turnOn;
+	private String turnOff;
+	private int brightness;
+	private String color;
+	
+	public Encapsulation(String turnOn,String turnOff,int brightness,String color) {
+		this.turnOn=turnOn;
+		this.turnOff=turnOff;
+		this.brightness=brightness;
+		this.color=color;
+	}
+	
+
+	public String getTurnOn() {
+		return turnOn;
+	}
+
+
+	public void setTurnOn(String turnOn) {
+		this.turnOn = turnOn;
+	}
+
+
+	public String getTurnOff() {
+		return turnOff;
+	}
+
+
+	public void setTurnOff(String turnOff) {
+		this.turnOff = turnOff;
+	}
+
+
+	public int getBrightness() {
+		 return brightness;
+	}
+
+
+	public void setBrightness(int brightness) {
+		this.brightness = brightness;
+		
+	}
+
+
+	public String getColor() {
+		return color;
+	}
+
+
+	public void setColor(String color) {
+		this.color = color;
+
+	}
+
+
+	public static void main(String[] args) {
+		Encapsulation encapsulation=new Encapsulation("On","Off",60,"blue");
+		System.out.println("turnOn:" + encapsulation.turnOn);
+		System.out.println("brightness:" + encapsulation.brightness);
+		System.out.println("colr:" + encapsulation.color);
+        encapsulation.setColor("white");
+        encapsulation.setBrightness(70);
+	}
+
+}

@@ -1,0 +1,39 @@
+package ops;
+
+interface device {
+	void turnOn();
+	void turnOff();
+	void setBrightness();
+	void setColor();
+}
+public class Mediaplayer implements device{
+
+	@Override
+	public void turnOn() {
+		System.out.println("device on");
+	}
+
+	@Override
+	public void turnOff() {
+		System.out.println("device off");
+		
+	}
+
+	@Override
+	public void setBrightness() {
+		System.out.println(60);
+		
+	}
+
+	@Override
+	public void setColor() {
+	System.out.println("red");
+		
+	}
+	public static void main(String[] args) {
+	device media = new Mediaplayer();
+	    media.setColor();
+	    media.turnOn();
+	    
+}
+	}

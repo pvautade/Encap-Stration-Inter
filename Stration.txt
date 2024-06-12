@@ -1,0 +1,43 @@
+package ops;
+
+ abstract class SmartDevice {
+	public int deviceId;
+	public String deviceName;
+	
+	public SmartDevice(int deviceId, String deviceName) {
+		this.deviceId=deviceId;
+		this.deviceName=deviceName;
+			}
+	public abstract void On();
+	public abstract void Off();
+	
+	public class Light extends SmartDevice {
+		public  Light( int deviceId, String deviceName) {
+			super(deviceId,deviceName);
+			
+		}
+
+		@Override
+		public void On() {
+			System.out.println("device  On");
+
+		}
+
+		@Override
+		public void Off() {
+		System.out.println("device  Off");
+
+		}
+
+	}
+	  
+  
+	public static void main(String[] args) {
+		SmartDevice smartdevice = new Ligh(121,"nokia");
+		System.out.println("deviceId:" +smartdevice.deviceId);
+		System.out.println("deviceName:" +smartdevice.deviceName);
+	      
+	}
+
+}
+
